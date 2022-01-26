@@ -1,0 +1,17 @@
+{
+  "name": "mass_unfollow",
+  "version": "1.0.0",
+  "description": "- Bot to unfollow All Twitter accounts\r - Just set and forget\r - Not even paid services like Circleboom can do this 👀",
+  "main": "scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "fs-extra": "^10.0.0",
+    "puppeteer": "^13.1.2"
+  }
+}
