@@ -31,6 +31,7 @@ async function massUnfollow(){
     await page.waitForTimeout(350);
 
     await page.type(selectorNameField, user);
+    await page.waitForTimeout(300)
 
     const selectorNextButton =  '#layers > div > div > div > div > div > div > div.css-1dbjc4n.r-1awozwy.r-18u37iz.r-1pi2tsx.r-1777fci.r-1xcajam.r-ipm5af.r-g6jmlv > div.css-1dbjc4n.r-1867qdf.r-1wbh5a2.r-kwpbio.r-rsyp9y.r-1pjcn9w.r-1279nm1.r-htvplk.r-1udh08x > div > div > div.css-1dbjc4n.r-kemksi.r-6koalj.r-16y2uox.r-1wbh5a2 > div.css-1dbjc4n.r-16y2uox.r-1wbh5a2.r-1jgb5lz.r-1ye8kvj.r-13qz1uu > div.css-1dbjc4n.r-16y2uox.r-1wbh5a2.r-1dqxon3 > div > div:nth-child(6) > div > span > span';
     await page.waitForSelector(selectorNextButton);
@@ -44,10 +45,10 @@ async function massUnfollow(){
     await page.waitForTimeout(1000);
     
     const usersPerScreen = 6;
-    const numberOfScrolldowns = 10
+    const numberOfRefreshes = 138;
     
     
-    for ( let r = 0; r < numberOfScrolldowns+1; r++ ){
+    for ( let r = 0; r < numberOfRefreshes+1; r++ ){
         
         for ( let i = 1; i < usersPerScreen+1; i++ ){
             
@@ -63,14 +64,14 @@ async function massUnfollow(){
             await page.waitForTimeout(300);
             
         }
-        
+        console.log("Unfollowed ", ( r + 1 ) * usersPerScreen , " accounts")
         await page.goto('https://twitter.com/EnriqueGzs/following');
         await page.waitForTimeout(3000)
 
     }
-    debugger
+    // debugger
 
-
+    console.log("Your Massive Unfollow was such a blas!! 🤘")
 
 
     await browser.close();
