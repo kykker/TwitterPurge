@@ -5,7 +5,7 @@ const loginUrl = 'https://twitter.com/i/flow/login';
 
 
 const user = process.env.USER;
-const psswd = process.env.PASSWORD;
+// const psswd = process.env.PASSWORD;
 
 async function massUnfollow(){
 
