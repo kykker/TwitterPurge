@@ -69,7 +69,6 @@ async function massUnfollow(){
         await page.waitForTimeout(3000)
 
     }
-    // debugger
 
     console.log("Your Massive Unfollow was such a blas!! 🤘")
 
